@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Tienda_De_RopaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Buzo">
+    <Key>
+      <PropertyRef Name="id_Buzo" />
+    </Key>
+    <Property Name="id_Buzo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Talle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estilo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Pantalone">
+    <Key>
+      <PropertyRef Name="id_Pantalon" />
+    </Key>
+    <Property Name="id_Pantalon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Talle" Type="Int32" />
+    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estilo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Remera">
+    <Key>
+      <PropertyRef Name="id_Remera" />
+    </Key>
+    <Property Name="id_Remera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Talle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estilo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Zapatilla">
+    <Key>
+      <PropertyRef Name="id_Zapatilla" />
+    </Key>
+    <Property Name="id_Zapatilla" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Talle" Type="Int32" />
+    <Property Name="Modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estilo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Tienda_De_RopaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Buzos" EntityType="Self.Buzo" />
+    <EntitySet Name="Pantalones" EntityType="Self.Pantalone" />
+    <EntitySet Name="Remeras" EntityType="Self.Remera" />
+    <EntitySet Name="Zapatillas" EntityType="Self.Zapatilla" />
+  </EntityContainer>
+</Schema>
